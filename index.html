@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIS HW3</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .year-block,
+        .month-block {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .year-cell,
+        .month-cell {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgray;
+            cursor: pointer;
+            border: 1px solid gray;
+        }
+
+        .year-cell:hover,
+        .month-cell:hover {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title">
+        <h1 id=>新聞來源:The News Len關鍵評論</h1>
+        <img src="news_logo.png">
+    </div>
+    <div id="controls">
+        <h3>Select Year</h3>
+        <div id="year-block"></div>
+
+        <h3>Select Month</h3>
+        <div id="month-block"></div>
+    </div>
+    <div id="chart"></div>
+
+    <div id="time">
+    </div>
+
+    <script src="graph.js"></script>
+
+</body>
+
+</html>
