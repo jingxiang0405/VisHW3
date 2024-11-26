@@ -7,45 +7,49 @@
     <title>VIS HW3</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
-        .year-block,
-        .month-block {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-        }
-
-        .year-cell,
-        .month-cell {
-            width: 50px;
-            height: 50px;
-            margin: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: lightgray;
-            cursor: pointer;
-            border: 1px solid gray;
-        }
-
-        .year-cell:hover,
-        .month-cell:hover {
-            background-color: gray;
-            color: white;
-        }
+            #news_source, #news_logo{
+                display: inline-block;
+            }
+            #year-select, #month-select, #top-select{
+                margin-right: 20px;
+            }
     </style>
 </head>
 
 <body>
     <div id="title">
-        <h1 id=>新聞來源:The News Len關鍵評論</h1>
-        <img src="news_logo.png">
+                <img src="news_logo.png" id="news_logo">
+        <h1 id="news_source">新聞來源:The News Len關鍵評論</h1>
+    </div>
+    <div>
+        <h2>
+            這則新聞紀錄了臺灣信用卡公司的發卡量比較。原圖表如下
+        </h2>
+        <a href="https://www.thenewslens.com/article/242666">
+            <img src="ori_graph.png", alt="https://www.thenewslens.com/article/242666">
+        </a>
+
+        <h2>
+            原圖有以下問題點：
+            <p>
+                <h3>
+                ● 使用Bar Chart Race的方式呈現，只能觀察到趨勢及結果，時間中段的數據很難清楚表達出來。<br>
+                 ● 無法自行決定資料筆數
+            </h3>
+            </p>
+        </h2>
     </div>
     <div id="controls">
-        <h3>Select Year</h3>
-        <div id="year-block"></div>
+        <label for="year-select">Select Year:</label>
+        <select id="year-select"></select> 
 
-        <h3>Select Month</h3>
-        <div id="month-block"></div>
+        <label for="month-select">Select Month:</label>
+        <select id="month-select"></select> 
+        
+        <label for="top-select">top</label>
+        <select id="top-select"></select> 
+
+
     </div>
     <div id="chart"></div>
 
